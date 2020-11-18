@@ -11,6 +11,23 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var messageRouter = require('./routes/messageRouter');
 
+//Import mongoose
+var mongoose = require('mongoose');
+
+
+//Import Model
+const Messages = require('./models/messages');
+
+
+//Connect to database
+const url = config.mongoUrl;
+const connect = mongoose.connect(url);
+
+connect.then((db) => {
+  console.log('Connected correctly to server');
+}, (err) => { console.log(err) });
+
+
 var app = express();
 
 // view engine setup

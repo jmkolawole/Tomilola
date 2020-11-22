@@ -5,8 +5,11 @@ const mongoose = require('mongoose');
 const Messages = require('../models/messages');
 
 const messageRouter = express.Router();
+//const cors = require('./cors');
 
+  
 messageRouter.use(bodyParser.json());
+
 
 messageRouter.route('/')
 .get((req,res,next) => {
@@ -30,7 +33,7 @@ messageRouter.route('/')
 })
 .put((req, res, next) => {
     res.statusCode = 403;
-    res.end('PUT operation not supported on /message');
+    res.end('PUT operation not supported on /messages');
 })
 .delete((req, res, next) => {
     Message.remove({})

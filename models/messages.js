@@ -7,7 +7,6 @@ const Schema = mongoose.Schema;
 const messageSchema = new Schema({
     name: {
         type: String,
-        unique: true
     },
     anonymous: {
         type: Boolean,
@@ -15,6 +14,10 @@ const messageSchema = new Schema({
     message : {
       type: String,
       required: true 
+    },
+    likes : {
+        type: Number,
+        default : 0,
     }
 },{
     timestamps: true

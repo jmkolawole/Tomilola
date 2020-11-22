@@ -1,3 +1,3 @@
 module.exports = {
-    'mongoUrl' : 'mongodb://localhost:27017/tomilola',
+    'mongoUrl' : 'mongodb+srv://Kolawole:OladapO2290@ajoke.6ft8q.mongodb.net/Ajoke?retryWrites=true&w=majority',
 }

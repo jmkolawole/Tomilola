@@ -39,6 +39,7 @@ const connect = mongoose.connect(process.env.MONGODB_URL || url,{
   console.log('Database Connected')
 });
 
+
 connect.then((db) => {
   console.log('Connected correctly to server');
 }, (err) => { console.log(err) });
@@ -46,9 +47,11 @@ connect.then((db) => {
 
 var app = express();
 
-if(process.env.NODE_ENV === 'production'){
+/*if(process.env.NODE_ENV === 'production'){
   app.use(express.static('frontend/build'))
+
 }
+*/
 
 app.use(function(req, res, next){
 res.header("Access-Control-Allow-Origin", "*",);
